@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>testreact</title>
+    <link rel="stylesheet" href="/testreact/src/App.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="page1" class="page active">
+      <div class="headerSection">
+        <header class="header">
+          <div class="logo">
+            <img src="/testreact/src/picture/fastfood.jpg" alt="">
+          </div>
+          <div class="buttonSection">
+            <button onclick="showPage('page2')" id="page1">Home</button>
+            <button>fastfood</button>
+           </div>
+           <input type="text" value="" placeholder="search">
+          <div class="buttonSection2">
+            <button class="btn1" onclick="signUp()">Sign Up</button>
+            <button class="btn2" onclick="logIn()">Log in</button>
+          </div>
+        </header>
+      </div>
+      <!-- mainSection -->
+       <div>
+        <main class="mainSection">
+          <div class="explaining">
+            <h1>
+              <span>Be The Fastest </span> <br>
+              In Delivering  Your Food
+            </h1>
+            <p>We’re passionate about combining quality ingredients with speedy service,<br> making it easy for you to grab a tasty meal on the go or enjoy it with friends and family. <br>
+               From classic favorites to new flavors, every bite is made to bring you comfort and joy. <br>
+              Hungry? Dive into our menu and discover why fast food has never tasted this good!</p>
+              <button>Get Started</button>
+              <h2>Fresh Food for You</h2>
+              <p>Delicious food made fast! <br>
+                From burgers to fries and everything in between, <br>we serve fresh flavors you’ll love <br>
+                —ready whenever you are.</p>
+              <button>More...</button>
+          </div>
+            
+            <div class="imageSection">
+              <img class="action1" src="/testreact/src/picture/Rectangle 1.png" alt="">
+            
+            </div>
+        </main>
+       </div>
+       <div>
+        <main class="mainSection2">
+          <h1>Fresh Food for You</h1>
+          <div class="imageSection2">
+            <!-- cardSection -->
+            <div class="cardSection">
+              <div class="img1">
+                <img src="/testreact/src/picture/food1.png" alt="">
+                <p class="p1">SAMOSA</p>
+                <button>ORDER NOW</button>
+                <div class="offer">
+                  <p>Offer 25%</p>
+                  <img src="/testreact/src/picture/Union.png" alt="">
+                </div>
+              </div>
+        
+              <div class="img1">
+                <img src="/testreact/src/picture/food2.png" alt="">
+                <p class="p1">IDLY</p>
+                <button>ORDER NOW</button>
+                <div class="offer">
+                  <p>Offer 25%</p>
+                  <img src="/testreact/src/picture/Union.png" alt="">
+                </div>
+              </div>
+        
+              <div class="img1">
+                <img src="/testreact/src/picture/food3.png" alt="">
+                <p class="p1">ROAST</p>
+                <button>ORDER NOW</button>
+                <div class="offer">
+                  <p>Offer 25%</p>
+                  <img src="/testreact/src/picture/Union.png" alt="">
+                </div>
+              </div>
+        
+              <div class="img1">
+                <img src="/testreact/src/picture/food4.png" alt="">
+                <p class="p1">MEALS</p>
+                <button>ORDER NOW</button>
+                <div class="offer">
+                  <p>Offer 25%</p>
+                  <img src="/testreact/src/picture/Union.png" alt="">
+                </div>
+              </div>
+        
+              <div class="img1">
+                <img src="/testreact/src/picture/food5.png" alt="">
+                <p class="p1">FRIED RICE</p>
+                <button>ORDER NOW</button>
+                <div class="offer">
+                  <p>Offer 25%</p>
+                  <img src="/testreact/src/picture/Union.png" alt="">
+                </div>
+              </div>
+        
+              <div class="img1">
+                <img src="/testreact/src/picture/food6.png" alt="">
+                <p class="p1">BIRIYANI</p>
+                <button>ORDER NOW</button>
+                <div class="offer">
+                  <p>Offer 25%</p>
+                  <img src="/testreact/src/picture/Union.png" alt="">
+                </div>
+              </div>
+        
+              <div class="img1">
+                <img src="/testreact/src/picture/food7.png" alt="">
+                <p class="p1">NOODLES</p>
+                <button>ORDER NOW</button>
+                <div class="offer">
+                  <p>Offer 25%</p>
+                  <img src="/testreact/src/picture/Union.png" alt="">
+                </div>
+              </div>
+        
+              <div class="img1">
+                <img src="/testreact/src/picture/food8.png" alt="">
+                <p class="p1">ROTTI</p>
+                <button>ORDER NOW</button>
+                <div class="offer">
+                  <p>Offer 25%</p>
+                  <img src="/testreact/src/picture/Union.png" alt="">
+                </div>
+              </div>
+        
+            </div>
+          </div>
+        </main>    
+       </div>
+        
+        
+        <!-- sign Up form (overlay) -->
+        <div id="signupOverlay" class="signup-overlay" style="display:none;">
+          <div class="signup-box" id="signupBox">
+            <button class="close-btn" onclick="closeSignUp()" aria-label="Close">×</button>
+            <h2>Sign Up</h2>
+            <form id="formBox">
+              <input id="name" type="text" placeholder="Username" required>
+              <input type="email" placeholder="Email ID" required>
+              <input type="tel" placeholder="Mobile Number" required>
+              <input type="password" placeholder="Password" required>
+              <button class="btn" type="submit" id="registerBox">Register</button>
+              <p class="paragraph">Already have an account?<a href="#" onclick="closeSignUp(); logIn(); return false;">log in</a></p>
+            </form>
+          </div>
+        </div>
+        <!-- log in form -->
+         <div id="logInOverlay" class="logInOverlay" style="display: none;">
+          <div class="signup-box">
+            <button class="close-btn" onclick="closeLogIn()" aria-label="Close">×</button>
+            <h2>Log In</h2>
+            <form>
+              <input type="text" placeholder="Username" required>
+              <input type="password" placeholder="Password" required>
+              <button class="btn" type="submit">Log in</button>
+            </form>
+          </div>
+         </div>
+    </div>
+  
+    <!-- بخش Home صفحه دوم سایت -->
+<div  id="page2" class="page">
+<div class="headerContainer">
+<header class="header">
+  <div class="logo">
+    <img src="/testreact/src/picture/fastfood.jpg" alt="">
+  </div>
+  <div class="buttonSection3">
+    <button id="buttonHome" onclick="showPage('page1')">Home</button>
+   
+      <button>Foods</button>
+      <button><img src="/testreact/src/icons/icons8.gif" 
+        style="width:20px; height:20px; vertical-align:middle;" alt="">MyBag</button>
+      <button>Order Review</button>
+      <button>Profile <img src="/testreact/src/icons/icon9.png" 
+        style="width:20px; height:20px; vertical-align:middle;" alt=""> </button>
+   </div>
+</header>
+</div>
+<main>
+  <div class="mainSection3">
+    <div class="explaining3">
+      <h2>Introduction of restaurants</h2>
+      <p> Restaurants are divided into different categories based on the style of service, type of food, atmosphere, and experience
+       they provide to customers. <br>
+       Understanding these categories helps any individual or business make a more appropriate choice and create a better experience for their customers. </p>
+    </div>
+    <div class="imageSection3">
+      <img src="/testreact/src/picture/food9.png" alt="">
+    </div>
+    
+  </div>
+</main>
+<div>
+  <main>
+    <div class="mainSection4">
+      <h1>Stores</h1>
+      <div class="cardSection4">
+        <div class="img4">
+          <img src="/testreact/src/picture/fastfood15.webp" alt="">
+          <p class="p4">Store 1</p>
+          <a href="">View More</a>
+        </div>
+        <div class="img4">
+          <img src="/testreact/src/picture/fastfood14.webp" alt="">
+          <p class="p4">Store 2</p>
+          <a href="">View More</a>
+        </div>
+        <div class="img4">
+          <img src="/testreact/src/picture/fastfood12.jpg" alt="">
+          <p class="p4">Store 3</p>
+          <a href="">View More</a>
+        </div>
+        <div class="img4">
+          <img src="/testreact/src/picture/fastfood13.jpg" alt="">
+          <p class="p4">Store 4</p>
+          <a href="">View More</a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+</div>
+<script type="module" src="src/main.js"></script>
+  </body>
+</html>
